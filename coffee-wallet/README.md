@@ -32,4 +32,7 @@ A complete SRS tied directly to the approved Figma screens, plus a structured li
 - Flows defined screen by screen from the Figma design
 - Requirements and open questions tracked in ClickUp
 
+## Links
+- Website: http://13.207.211.168/
+
 [← Back to all projects](../README.md)
