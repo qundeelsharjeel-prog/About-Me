@@ -51,9 +51,4 @@ A single marketplace platform:
 
 ## Outcome
 The backend, admin dashboard and vendor dashboard are built. The vendor dashboard was still a clickable prototype running on mock data when I last reviewed it, with its API layer being wired to the backend.
-## Links
-- Google Play: _add link_
-- App Store: _add link_
-- Live site: _add link_
-
 [← Back to all projects](../README.md)

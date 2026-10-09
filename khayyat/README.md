@@ -35,8 +35,6 @@ A two-sided marketplace: a customer app for discovering and ordering, a vendor a
 The admin app runs on an AWS EC2 Ubuntu server: Nginx in front, FastAPI under uvicorn, managed by PM2, served on the production domain.
 
 ## Links
-- Google Play: _add link_
-- App Store: _add link_
 - Website: https://khayyat-app.com
 
 [← Back to all projects](../README.md)

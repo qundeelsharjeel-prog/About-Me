@@ -45,7 +45,5 @@ The full platform (Flutter mobile app, admin dashboard and FastAPI backend) went
 
 ## Links
 - Website: https://carelink-kw.com
-- Google Play: _add link_
-- App Store: _add link_
 
 [← Back to all projects](../README.md)

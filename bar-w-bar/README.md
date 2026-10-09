@@ -43,8 +43,4 @@ Kuwait needed a trusted local marketplace. Users want to post paid listings with
 ## Outcome
 A production-ready backend with 30+ API endpoints across 15+ modules, documented in Swagger and in a written API reference, plus a Flutter app with about 25 screens. The app is live on the App Store.
 
-## Links
-- App Store: _add link_ (the app is on the App Store, as listed on my resume)
-- Google Play: _add link_
-
 [← Back to all projects](../README.md)

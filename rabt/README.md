@@ -45,8 +45,4 @@ One app where members create or join a group, split shared costs, track balances
 ## Outcome
 The backend covers every module from the platform's technical documentation, with a documented API of 47 paths. The Flutter app and admin panel are built on top of it.
 
-## Links
-- Google Play: _add link_
-- App Store: _add link_
-
 [← Back to all projects](../README.md)

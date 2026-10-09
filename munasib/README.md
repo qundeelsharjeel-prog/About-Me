@@ -50,8 +50,4 @@ One Arabic-first platform that covers hiring and freelancing end to end:
 ## Outcome
 All eight contexts are implemented and verified, and the app is live on the App Store. I architected and built it independently, and the whole stack is Dockerized for one-command deployment.
 
-## Links
-- App Store: _add link_ (the app is on the App Store, as listed on my resume)
-- Google Play: _add link_
-
 [← Back to all projects](../README.md)
