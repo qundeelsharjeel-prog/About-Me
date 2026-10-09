@@ -44,4 +44,7 @@ Three connected products on one backend:
 ## Outcome
 The full ecosystem is built and the student app is on Google Play. The platform includes a real-time teacher booking system with live availability calendars, one-on-one scheduling, Socket.IO chat, and post-session ratings and reviews. A unified wallet powers both course purchases and paid sessions, with tiered subscription plans and checkout through MyFatoorah and KNet.
 
+## Links
+- Admin panel: http://3.111.72.100/admin/#/login
+
 [← Back to all projects](../README.md)
