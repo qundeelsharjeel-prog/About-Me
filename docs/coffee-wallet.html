@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" class="no-js" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coffee Wallet · Qundeel Chaudhary</title>
+<meta name="description" content="Prepaid coffee card app for Kuwait: SRS, client questions and architecture.">
+<meta name="theme-color" content="#006a6a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23006a6a'/%3E%3Ctext x='32' y='41' font-size='26' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EQC%3C/text%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300..700&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="appbar"><div class="wrap">
+<a class="icon-btn" href="index.html#projects" aria-label="Back to all projects"><span class="icon" aria-hidden="true">arrow_back</span></a><a class="brand" href="index.html"><span class="logo">QC</span><span>Qundeel Chaudhary</span></a>
+<span class="spacer"></span>
+<button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme"><span class="icon" aria-hidden="true">dark_mode</span></button>
+</div></header>
+<main><div class="wrap">
+<div class="page-head">
+  <a class="btn text crumb" href="index.html#projects"><span class="icon" aria-hidden="true">arrow_back</span>All projects</a>
+  <div class="title-card">
+    <span class="kind">Case study</span>
+    <h1>Coffee Wallet</h1>
+    <div class="lead"><p>Coffee Wallet is a prepaid coffee card app for the Kuwait market — customers load a balance and pay for coffee from their phone.</p></div>
+    <div class="chips"><span class="chip static">FastAPI</span><span class="chip static">React</span></div>
+    <div class="btn-row"><a class="btn filled" href="http://13.207.211.168/" target="_blank" rel="noopener"><span class="icon" aria-hidden="true">open_in_new</span>Website</a></div>
+  </div>
+</div>
+<div class="sections"><section class="card reveal"><h3><span class="icon" aria-hidden="true">person</span>My Role</h3><div class="prose"><ul><li>Wrote the <strong>Software Requirements Specification (SRS)</strong>, derived from the Figma design pages</li><li>Prepared the <strong>client questions list</strong> to close requirement gaps before build</li><li>Defined the technical stack and architecture</li><li>Managed work as tickets in ClickUp</li></ul></div></section><section class="card reveal"><h3><span class="icon" aria-hidden="true">report</span>The Problem</h3><div class="prose"><p>Before development can start safely, the design has to be turned into precise, testable requirements, and every ambiguity needs an answer from the client.</p></div></section><section class="card reveal"><h3><span class="icon" aria-hidden="true">lightbulb</span>The Solution</h3><div class="prose"><p>A complete SRS tied directly to the approved Figma screens, plus a structured list of open questions for the client, so the build team starts with clear scope.</p></div></section><section class="card reveal"><h3><span class="icon" aria-hidden="true">code</span>Tech Stack</h3><div class="prose"><ul><li><strong>Backend:</strong> FastAPI (Python)</li><li><strong>Frontend:</strong> React 19</li><li><strong>Database:</strong> MongoDB</li><li><strong>Architecture:</strong> Clean Architecture + DDD, no duplicated code</li><li><strong>Project layout:</strong> separate <code>backend/</code> and <code>frontend/</code> folders</li></ul></div></section><section class="card reveal"><h3><span class="icon" aria-hidden="true">account_tree</span>Architecture &amp; Key Decisions</h3><div class="prose"><ul><li><strong>Separate backend and frontend folders</strong> so each can be built, tested and deployed independently.</li><li><strong>Clean Architecture + DDD</strong> to keep wallet/payment rules isolated from framework code.</li><li><strong>Real <code>.env</code> configuration with a local MongoDB</strong> (no Docker) for a simple developer setup.</li></ul></div></section><section class="card reveal"><h3><span class="icon" aria-hidden="true">star</span>Key Features</h3><div class="prose"><ul><li>Prepaid card / wallet balance</li><li>Flows defined screen by screen from the Figma design</li><li>Requirements and open questions tracked in ClickUp</li></ul></div></section></div>
+<div class="pager"><a class="btn tonal" href="rabt.html"><span class="icon" aria-hidden="true">arrow_back</span>Rabt</a><a class="btn tonal" href="icaremanager.html">iCareManager<span class="icon" aria-hidden="true">arrow_forward</span></a></div>
+</div></main>
+<footer><div class="wrap">© Qundeel Chaudhary · <a href="index.html">Portfolio</a></div></footer>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>

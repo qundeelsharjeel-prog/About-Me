@@ -51,4 +51,5 @@ A single marketplace platform:
 
 ## Outcome
 The backend, admin dashboard and vendor dashboard are built. The vendor dashboard was still a clickable prototype running on mock data when I last reviewed it, with its API layer being wired to the backend.
+
 [← Back to all projects](../README.md)

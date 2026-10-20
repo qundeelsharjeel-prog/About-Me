@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" class="no-js" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abby · Qundeel Chaudhary</title>
+<meta name="description" content="AI product search and price comparison across stores, with admin dashboard and mock-mode mobile app.">
+<meta name="theme-color" content="#006a6a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23006a6a'/%3E%3Ctext x='32' y='41' font-size='26' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EQC%3C/text%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300..700&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="appbar"><div class="wrap">
+<a class="icon-btn" href="index.html#projects" aria-label="Back to all projects"><span class="icon" aria-hidden="true">arrow_back</span></a><a class="brand" href="index.html"><span class="logo">QC</span><span>Qundeel Chaudhary</span></a>
+<span class="spacer"></span>
+<button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme"><span class="icon" aria-hidden="true">dark_mode</span></button>
+</div></header>
+<main><div class="wrap">
+<div class="page-head">
+  <a class="btn text crumb" href="index.html#projects"><span class="icon" aria-hidden="true">arrow_back</span>All projects</a>
+  <div class="title-card">
+    <span class="kind">Case study</span>
+    <h1>Abby</h1>
+    <div class="lead"><p>Abby is an AI-assisted product search and price-comparison app for the Kuwait market. A shopper describes what they need by text, photo or voice, and Abby finds and ranks matching products from several stores, with prices in KWD. It has three parts: a Flutter mobile app, a NestJS backend with a background worker, and a React admin dashboard. Arabic and English are supported, including right-to-left layout.</p></div>
+    <div class="chips"><span class="chip static">Flutter</span><span class="chip static">NestJS</span><span class="chip static">React</span></div>
+    <div class="btn-row"><a class="btn filled" href="http://15.207.50.194/login" target="_blank" rel="noopener"><span class="icon" aria-hidden="true">open_in_new</span>Admin panel</a></div>
+  </div>
+</div>
+<div class="sections"><section class="card reveal"><h3><span class="icon" aria-hidden="true">person</span>My Role</h3><div class="prose"><p>I built all three parts:</p><ul><li><strong>Backend:</strong> the NestJS API and the worker, including authentication with OTP, catalog, search, billing, notifications and the admin APIs</li><li><strong>Admin dashboard:</strong> the React and Vite dashboard for running the platform</li><li><strong>Mobile app:</strong> the Flutter app, with an in-memory mock mode so it runs with no backend</li></ul></div></section><section class="card reveal"><h3><span class="icon" aria-hidden="true">report</span>The Problem</h3><div class="prose"><p>Comparing the same product across many online stores means opening many tabs. Shoppers want to describe what they need in their own words and get a short, ranked list, in Arabic or English, at fair prices.</p></div></section><section class="card reveal"><h3><span class="icon" aria-hidden="true">lightbulb</span>The Solution</h3><div class="prose"><ul><li>A search flow where the shopper picks a category and describes the need by text, photo or voice, and gets ranked results with a best-value badge.</li><li>A catalog of stores and products that the backend keeps fresh with scraping jobs and embeddings.</li><li>Free searches with a monthly limit, and paid subscription plans for unlimited use.</li><li>An admin dashboard for the team to manage the catalog, content, billing, notifications and support.</li></ul></div></section><section class="card reveal"><h3><span class="icon" aria-hidden="true">code</span>Tech Stack</h3><div class="prose"><ul><li><strong>Backend:</strong> NestJS (TypeScript), MongoDB, Redis, BullMQ for background jobs, Swagger / OpenAPI</li><li><strong>Admin dashboard:</strong> React, Vite, Tailwind CSS, English and Arabic with RTL</li><li><strong>Mobile:</strong> Flutter (Dart), flutter_bloc, Dio</li><li><strong>Integrations:</strong> SMSBox (SMS / OTP), MyFatoorah (payments), Firebase (push notifications), Google and Apple sign-in, an AI provider, S3-compatible file storage</li></ul></div></section><section class="card wide reveal"><h3><span class="icon" aria-hidden="true">account_tree</span>Architecture &amp; Key Decisions</h3><div class="prose"><ul><li><strong>Every external provider has a <code>mock</code> and a <code>real</code> mode</strong> (SMS, payments, push, storage, AI). By default everything runs on mocks, so a developer starts the whole system locally with no credentials.</li><li><strong>A separate worker process</strong> handles scraping, embeddings, SMS, push and billing jobs, so slow work never blocks the API.</li><li><strong>Idempotent seed scripts</strong> ship with the code (categories, cities, onboarding, pages, settings, catalog, first admin). They are safe to run on every deploy.</li><li><strong>The mobile app has a mock switch</strong> (<code>--dart-define=MOCK=true</code>). It replaces only the network layer under Dio, so the real repositories, interceptors and error handling still run. This makes demos and builds possible before the backend is ready.</li><li><strong>Documented modules.</strong> Each backend module has its own README that lists what could not be verified without real credentials.</li></ul></div></section><section class="card reveal"><h3><span class="icon" aria-hidden="true">star</span>Key Features</h3><div class="prose"><ul><li>Search by text, photo or voice, ranked results, search history and favourites</li><li>Free search quota and subscription plans with checkout</li><li>OTP sign-up and login, Google and Apple sign-in</li><li>Notifications and push</li><li>Admin: catalog (stores, products, scrape jobs, category mappings), content (banners, categories, cities, onboarding, pages, trending), billing (plans, discounts, payments, subscriptions), notifications, support inbox, analytics, SMS and audit logs</li><li>Arabic and English with RTL layout</li></ul></div></section><section class="card reveal"><h3><span class="icon" aria-hidden="true">flag</span>Outcome</h3><div class="prose"><p>The backend and the admin dashboard are built, and the admin dashboard is deployed. The mobile app is a clickable prototype that runs on mock data, and it can be built as a light release for Android and for iOS through TestFlight.</p></div></section></div>
+<div class="pager"><a class="btn tonal" href="bar-w-bar.html"><span class="icon" aria-hidden="true">arrow_back</span>Bar w Bahr</a><a class="btn tonal" href="azala.html">Azala<span class="icon" aria-hidden="true">arrow_forward</span></a></div>
+</div></main>
+<footer><div class="wrap">© Qundeel Chaudhary · <a href="index.html">Portfolio</a></div></footer>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>

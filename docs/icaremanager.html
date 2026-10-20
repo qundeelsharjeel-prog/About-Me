@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" class="no-js" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iCareManager · Qundeel Chaudhary</title>
+<meta name="description" content="Healthcare management platform on microservices, with a centralized logging service.">
+<meta name="theme-color" content="#006a6a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23006a6a'/%3E%3Ctext x='32' y='41' font-size='26' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EQC%3C/text%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})()</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300..700&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="appbar"><div class="wrap">
+<a class="icon-btn" href="index.html#projects" aria-label="Back to all projects"><span class="icon" aria-hidden="true">arrow_back</span></a><a class="brand" href="index.html"><span class="logo">QC</span><span>Qundeel Chaudhary</span></a>
+<span class="spacer"></span>
+<button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme"><span class="icon" aria-hidden="true">dark_mode</span></button>
+</div></header>
+<main><div class="wrap">
+<div class="page-head">
+  <a class="btn text crumb" href="index.html#projects"><span class="icon" aria-hidden="true">arrow_back</span>All projects</a>
+  <div class="title-card">
+    <span class="kind">Case study</span>
+    <h1>iCareManager</h1>
+    <div class="lead"><p>iCareManager is a healthcare management platform used to run day-to-day clinical and administrative operations. It is built as a distributed set of microservices on ASP.NET MVC and .NET Core, with an Angular front end.</p></div>
+    <div class="chips"><span class="chip static">.NET</span><span class="chip static">Angular</span></div>
+    <div class="btn-row"><a class="btn filled" href="https://icaremanager.com" target="_blank" rel="noopener"><span class="icon" aria-hidden="true">open_in_new</span>Website</a></div>
+  </div>
+</div>
+<div class="sections"><section class="card wide reveal"><h3><span class="icon" aria-hidden="true">person</span>My Role</h3><div class="prose"><p>I work on it full time as a Senior Software Engineer (since 02/2022), remote for a US team. My work:</p><ul><li>Designed and implemented a <strong>centralized logging microservice</strong> with Serilog and OpenTelemetry, and wrote an SDK wrapper so every service integrates it the same way</li><li>Built and improved <strong>ASP.NET MVC 4.7 and .NET Core 6/9 modules</strong>: dynamic label management, complex forms and module-level permissions</li><li>Built UI with Jade and Angular 10</li><li>Diagnosed and fixed production issues, and refactored existing features to reduce bugs and latency</li><li>Use AI-assisted engineering (OpenAI API, Claude Code, Antigravity) to speed up feature delivery, refactors and debugging across the microservices codebase</li></ul></div></section><section class="card reveal"><h3><span class="icon" aria-hidden="true">report</span>The Problem</h3><div class="prose"><p>A clinical platform has many modules, each with its own forms, labels and permissions. Logs from many services are hard to follow, and production issues are hard to trace without one consistent standard.</p></div></section><section class="card reveal"><h3><span class="icon" aria-hidden="true">lightbulb</span>The Solution</h3><div class="prose"><ul><li>One logging service and SDK, so every microservice logs in the same format</li><li>Reusable dynamic labels, forms and permissions, so modules stay consistent and easy to maintain</li></ul></div></section><section class="card reveal"><h3><span class="icon" aria-hidden="true">code</span>Tech Stack</h3><div class="prose"><ul><li><strong>Backend:</strong> ASP.NET MVC 4.7, .NET Core 6 / 9</li><li><strong>Front end:</strong> Angular 10, Jade</li><li><strong>Database:</strong> MS SQL Server</li><li><strong>Observability:</strong> Serilog, OpenTelemetry</li></ul></div></section><section class="card reveal"><h3><span class="icon" aria-hidden="true">star</span>Key Features</h3><div class="prose"><ul><li>Dynamic forms and label management</li><li>Module-level permissions</li><li>Centralized logging across microservices, with an SDK wrapper</li></ul></div></section></div>
+<div class="pager"><a class="btn tonal" href="coffee-wallet.html"><span class="icon" aria-hidden="true">arrow_back</span>Coffee Wallet</a><a class="btn tonal" href="messenger-ai-chatbot.html">Messenger AI Chatbot<span class="icon" aria-hidden="true">arrow_forward</span></a></div>
+</div></main>
+<footer><div class="wrap">© Qundeel Chaudhary · <a href="index.html">Portfolio</a></div></footer>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>

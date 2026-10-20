@@ -1,7 +1,7 @@
-# Ikarus (Aspire Academy) — Case Study
+# Ikarus — Case Study
 
 ## Overview
-Ikarus (the working folder is called "Aspire Academy") is an online learning platform. Students browse courses, book one-on-one or group sessions with instructors, watch video lessons, chat with teachers and pay with credits. It has a Flutter mobile app for students, two Angular panels (admin and teacher) and a Node.js backend.
+Ikarus, also known as Aspire Academy, is an online learning platform. Students browse courses, book one-on-one or group sessions with instructors, watch video lessons, chat with teachers and pay with credits. It has a Flutter mobile app for students, two Angular panels (admin and teacher) and a Node.js backend.
 
 ## My Role
 I was the main contributor (about 190 of 240 commits). I worked across the backend API, the Flutter app and the web panels.
@@ -45,6 +45,7 @@ Three connected products on one backend:
 The full ecosystem is built and the student app is on Google Play. The platform includes a real-time teacher booking system with live availability calendars, one-on-one scheduling, Socket.IO chat, and post-session ratings and reviews. A unified wallet powers both course purchases and paid sessions, with tiered subscription plans and checkout through MyFatoorah and KNet.
 
 ## Links
-- Admin panel: http://3.111.72.100/admin/#/login
+- Admin panel: http://3.111.72.100/admin/login
+- Teacher panel: http://3.111.72.100/teacher/login
 
 [← Back to all projects](../README.md)
