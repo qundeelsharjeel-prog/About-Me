@@ -2,7 +2,7 @@
 
 **Senior Full Stack Web & App Developer** · Lahore, Pakistan
 
-[Email](mailto:qundeelsharjeel@gmail.com) · [+923715622246](tel:+923715622246) · [LinkedIn](https://www.linkedin.com/in/qundeelch) · [**Portfolio site**](https://qundeelsharjeel-prog.github.io/About-Me/)
+[Email](mailto:qundeelsharjeel@gmail.com) · [+923715622246](tel:+923715622246) · [LinkedIn](https://www.linkedin.com/in/qundeel-sharjeel-a983423b5/) · [**Portfolio site**](https://github.com/qundeelsharjeel-prog/About-Me.git)
 
 ## About
 I design, build and deploy web applications and cross-platform mobile apps across finance, healthcare, e-learning, marketplace and B2B procurement. I build products end to end: responsive frontends in React, Angular and Tailwind CSS, mobile apps in Flutter, and backends in Node.js / NestJS, ASP.NET Core and FastAPI on PostgreSQL, MySQL, MongoDB and SQL Server. I have built business platforms from scratch with role-based access, admin dashboards, payments and third-party integrations (OpenAI, Meta Messenger, SMS / OTP, payment gateways, Microsoft 365, Salesforce), and I use agentic AI and AI-assisted engineering (Claude Code, Antigravity, OpenAI API) to take products from concept to production.
