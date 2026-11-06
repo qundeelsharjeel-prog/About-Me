@@ -52,5 +52,6 @@ I design, build and deploy web applications and cross-platform mobile apps acros
 | [iCareManager](icaremanager/README.md) | Healthcare management platform on microservices, with a centralized logging service. | ASP.NET, .NET Core, Angular, SQL Server |
 | [Messenger AI Chatbot](messenger-ai-chatbot/README.md) | Custom Odoo 19 module that answers Messenger customers with AI. | Odoo 19, Python, Meta Messenger |
 | [Pepsi Cola ERP](pepsi-cola-erp/README.md) | Sales and purchase ERP module: .NET 3 to .NET 8 upgrade and faster reports. | .NET 8, ADO.NET, Azure Functions |
+| [IQRAON AI](iqraon-ai/README.md) | AI-powered school management SaaS for Pakistani schools: attendance, fees, results and an AI assistant over school data. | React, Android, PostgreSQL, OpenAI |
 
 
