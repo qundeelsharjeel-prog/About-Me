@@ -1,6 +1,6 @@
 # IQRAON AI — Case Study
 
-AI-powered school management platform for schools: web app, Android app and one shared backend.
+AI-powered school management platform for schools: web app, mobile app and one shared backend.
 
 ## Overview
 
@@ -19,7 +19,7 @@ I worked on the proposal and technical approach for the platform: scoping the mo
 ## The Solution
 
 - **Web app (React)** for owners, principals, accountants and administrators.
-- **Android app** for teachers, principals and accountants on the move.
+- **Flutter mobile app** for teachers, principals and accountants on the move.
 - **Shared backend** with one API and one database serving both clients.
 - **Four AI features:** Smart Communication, School Analyst, Principal Assistant and Problem-Solving.
 - **Freemium plans** (Free, Growth, Pro) with SMS credits tracked separately.
@@ -27,8 +27,8 @@ I worked on the proposal and technical approach for the platform: scoping the mo
 ## Tech Stack
 
 - **Web:** React
-- **Mobile:** Android app
-- **Backend:** One shared API (framework to be finalised)
+- **Mobile:** Flutter
+- **Backend:** Python FastAPI, one shared API for web and mobile
 - **Database:** PostgreSQL, school id on every record for isolation
 - **AI:** OpenAI or an equivalent model, called only from the backend through controlled database functions
 - **Messaging:** Business SMS gateway with delivery status and credit deduction
@@ -37,7 +37,7 @@ I worked on the proposal and technical approach for the platform: scoping the mo
 
 ## Architecture & Key Decisions
 
-- **One backend, two clients.** Web and Android use the same API, so business rules live in one place.
+- **One backend, two clients.** Web and mobile use the same API, so business rules live in one place.
 - **Multi-tenancy by school id.** Every record carries a school identifier, so one deployment serves many schools with strictly separated data.
 - **AI through controlled functions.** The model never gets raw database access. It calls a fixed set of functions that return only what the signed-in role may see.
 - **Fetch first, then phrase.** The assistant gets the figures from the database first and then writes the reply. If the data does not exist, it says so instead of guessing.
@@ -76,7 +76,7 @@ I worked on the proposal and technical approach for the platform: scoping the mo
 - Detect, analyse, recommend, approve and execute, then track the result
 - Covers attendance, fee and academic problems, with before and after impact tracking
 
-**Android app by role**
+**Mobile app by role**
 - Teacher: mark attendance, tasks, student list, notifications
 - Principal: dashboard, AI assistant and insights, approvals, task assignment
 - Accountant: record payments, defaulter list, share receipts, collection summary
@@ -92,11 +92,11 @@ I worked on the proposal and technical approach for the platform: scoping the mo
 
 **Different needs per role.** Owners, principals, teachers and accountants need very different views. I defined role-based access up front and mapped each module and mobile screen to it.
 
-**Teachers with poor connectivity.** Attendance can be marked offline in the Android app and synced later.
+**Teachers with poor connectivity.** Attendance can be marked offline in the Flutter mobile app and synced later.
 
 ## Outcome
 
-A scoped proposal and technical plan for a school management SaaS covering web, Android, four AI features and SMS, ready to move into build.
+A scoped proposal and technical plan for a school management SaaS covering web, mobile, four AI features and SMS, ready to move into build.
 
 ## Links
 
