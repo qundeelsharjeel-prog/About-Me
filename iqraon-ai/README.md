@@ -1,6 +1,6 @@
 # IQRAON AI — Case Study
 
-AI-powered school management platform for Pakistani schools: web app, Android app and one shared backend.
+AI-powered school management platform for schools: web app, Android app and one shared backend.
 
 ## Overview
 
@@ -31,7 +31,7 @@ I worked on the proposal and technical approach for the platform: scoping the mo
 - **Backend:** One shared API (framework to be finalised)
 - **Database:** PostgreSQL, school id on every record for isolation
 - **AI:** OpenAI or an equivalent model, called only from the backend through controlled database functions
-- **Messaging:** Pakistani business SMS gateway with delivery status and credit deduction
+- **Messaging:** Business SMS gateway with delivery status and credit deduction
 - **Security:** Role-based access enforced on the server, encrypted API keys, audit log
 - **Operations:** Cloud hosting with automated backups
 
