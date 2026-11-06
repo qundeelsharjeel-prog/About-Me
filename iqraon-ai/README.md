@@ -1,10 +1,10 @@
 # IQRAON AI — Case Study
 
-AI-powered school management platform for Pakistani schools: web, Android app and one shared backend.
+AI-powered school management platform for Pakistani schools: web app, Android app and one shared backend.
 
 ## Overview
 
-IQRAON AI is a multi-tenant SaaS that gives a school one place to run attendance, fees, results, timetables and parent communication. An AI assistant sits on top of the school's own data so staff and parents can ask questions in plain language instead of digging through screens and registers.
+IQRAON AI is a multi-tenant SaaS that runs a school's daily operations and adds AI on top. It does more than store records: it watches the school's data, finds problems early (falling attendance, unpaid fees, students at risk), recommends what the principal should do, and carries out approved actions such as sending parent messages or assigning staff tasks.
 
 ## My Role
 
@@ -12,60 +12,91 @@ I worked on the proposal and technical approach for the platform: scoping the mo
 
 ## The Problem
 
-- Many schools still run on paper registers and spreadsheets.
-- Fee tracking, attendance and result reporting are slow and error-prone.
-- Parents get information late, and usually by phone or word of mouth.
-- Existing tools are expensive, English-only or not built around how Pakistani schools work.
+- Schools spend hours each day on attendance registers, fee follow-ups, phone calls to parents and manual reports.
+- Problems such as a class with slipping attendance or a growing fee backlog are noticed late, when they are already expensive to fix.
+- Most school software records data but does not help the principal decide what to do.
 
 ## The Solution
 
-- **Web app (React)** for school admins, teachers and accountants.
-- **Android app** for teachers and parents.
-- **Shared backend** exposing one API to both clients.
-- **AI assistant** that answers questions about attendance, fees and results from the school's own records.
-- **SMS notifications** for absences, fee reminders and announcements.
+- **Web app (React)** for owners, principals, accountants and administrators.
+- **Android app** for teachers, principals and accountants on the move.
+- **Shared backend** with one API and one database serving both clients.
+- **Four AI features:** Smart Communication, School Analyst, Principal Assistant and Problem-Solving.
+- **Freemium plans** (Free, Growth, Pro) with SMS credits tracked separately.
 
 ## Tech Stack
 
 - **Web:** React
 - **Mobile:** Android app
-- **Backend:** Shared API layer (framework to be finalised)
-- **Database:** PostgreSQL, multi-tenant by school id
-- **AI:** OpenAI, called through controlled database functions
-- **Messaging:** SMS gateway
-- **Auth:** Role-based access control (RBAC)
+- **Backend:** One shared API (framework to be finalised)
+- **Database:** PostgreSQL, school id on every record for isolation
+- **AI:** OpenAI or an equivalent model, called only from the backend through controlled database functions
+- **Messaging:** Pakistani business SMS gateway with delivery status and credit deduction
+- **Security:** Role-based access enforced on the server, encrypted API keys, audit log
+- **Operations:** Cloud hosting with automated backups
 
 ## Architecture & Key Decisions
 
-- **One backend, two clients.** The web and Android apps use the same API, so business rules live in one place.
-- **Multi-tenancy by school id.** Every table is scoped to a school, so one deployment serves many schools with isolated data.
-- **AI through controlled functions.** The model never gets raw database access. It calls a fixed set of database functions that return only what the signed-in role may see.
-- **Answers only from data.** If the data is not there, the assistant says it is unavailable instead of guessing.
-- **Role-based access.** Admin, teacher, accountant and parent roles each see only their own scope.
-- **Freemium plans.** Free, Growth and Pro tiers so small schools can start without cost.
+- **One backend, two clients.** Web and Android use the same API, so business rules live in one place.
+- **Multi-tenancy by school id.** Every record carries a school identifier, so one deployment serves many schools with strictly separated data.
+- **AI through controlled functions.** The model never gets raw database access. It calls a fixed set of functions that return only what the signed-in role may see.
+- **Fetch first, then phrase.** The assistant gets the figures from the database first and then writes the reply. If the data does not exist, it says so instead of guessing.
+- **Human approval before action.** Parent messages and tasks created by the AI wait for the principal's approval, and every message is kept in a communication history.
+- **AI usage metered per plan.** Student limits, AI limits and plans are configurable by the platform admin.
 
 ## Key Features
 
-- Student and class management
-- Daily attendance with parent alerts
-- Fee structure, vouchers and payment tracking
-- Exams, results and report cards
-- Timetables and announcements
-- AI assistant for natural-language questions on school data
-- SMS notifications
-- Subscription plans per school
+**Core school management**
+- School registration and profile
+- Student admission, profiles, guardian details and bulk import
+- Teacher and staff management with class and subject assignment
+- Classes, sections and timetables
+- Daily attendance (present, absent, late, leave)
+- Fee structures, invoices, full and partial payments, receipts and defaulter lists
+- Attendance and fee reports with PDF and Excel export
+- Principal dashboard with live statistics
+- Staff task assignment with due dates and reminders
+
+**AI Smart Communication**
+- Automatic SMS to parents when a student is marked absent
+- Scheduled fee reminders and bulk announcements
+- AI-written personalised messages with an admin approval step
+
+**AI School Analyst**
+- Detects repeated absences and declining attendance
+- Detects pending fees and declining fee collection
+- Recommends practical next steps based on the actual records
+- Daily, weekly and monthly insight reports
+
+**AI Principal Assistant**
+- Principals ask in plain English: absent students today, pending fee this month, class with the lowest attendance, frequently absent students, monthly performance report
+- Answers come only from the school's database
+
+**AI Problem-Solving**
+- Detect, analyse, recommend, approve and execute, then track the result
+- Covers attendance, fee and academic problems, with before and after impact tracking
+
+**Android app by role**
+- Teacher: mark attendance, tasks, student list, notifications
+- Principal: dashboard, AI assistant and insights, approvals, task assignment
+- Accountant: record payments, defaulter list, share receipts, collection summary
+- Everyone: secure login, push notifications, student search, call or SMS a parent, offline attendance with sync
 
 ## Challenges & How I Solved Them
 
 **Keeping AI answers trustworthy.** A model that can invent numbers is a risk for fees and results. I limited it to approved database functions and required it to say when data is missing.
 
-**Data isolation between schools.** One school must never see another's records. I scoped every table and query by school id and enforced it at the API layer.
+**Letting AI act without losing control.** Sending messages to parents is sensitive. Every AI-drafted message and action waits for approval and is logged.
 
-**Different needs per role.** Teachers, parents and admins need very different views. I defined RBAC up front and mapped each module to it.
+**Data isolation between schools.** One school must never see another's records. Every record and query is scoped by school id and enforced on the server.
+
+**Different needs per role.** Owners, principals, teachers and accountants need very different views. I defined role-based access up front and mapped each module and mobile screen to it.
+
+**Teachers with poor connectivity.** Attendance can be marked offline in the Android app and synced later.
 
 ## Outcome
 
-A scoped proposal and technical plan for a school management SaaS covering web, Android, AI and SMS, ready to move into build.
+A scoped proposal and technical plan for a school management SaaS covering web, Android, four AI features and SMS, ready to move into build.
 
 ## Links
 
